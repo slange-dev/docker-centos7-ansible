@@ -39,4 +39,4 @@ I use Docker to test my Ansible roles and playbooks on multiple OSes using CI to
 
 ## Author
 
-Created in 2021 by [slange-dev](https://www.slange-dev.github.io/).
+Created in 2021 by [slange-dev](https://slange-dev.github.io/).

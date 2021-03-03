@@ -53,7 +53,7 @@ jobs:
         uses: anchore/scan-action@v2.0.4
         with:
           image: "docker-ansible-test"
-          fail-build: true
+          fail-build: false
           
       - name: grype scan JSON results
         run: for j in `ls ./anchore-reports/*.json`; do echo "---- ${j} ----"; cat ${j}; echo; done

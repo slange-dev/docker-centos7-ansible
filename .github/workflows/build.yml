@@ -44,10 +44,11 @@ jobs:
 
     - name: Scan
       id: scan
-      uses: anchore/scan-action@v2
+      uses: anchore/scan-action@v2.0.4
       with:
-        image: "slange-dev/docker-centos7-ansible:latest"
+        image: "slange-dev/docker-centos7-ansible"
         fail-build: true
+        
     - name: grype scan JSON results
       id: results
       run: for j in `ls ./anchore-reports/*.json`; do echo "---- ${j} ----"; cat ${j}; echo; done

@@ -40,6 +40,27 @@ I use Docker to test my Ansible roles and playbooks on multiple OSes using CI to
 
 > **Important Note**: I use this image for testing in an isolated environment—not for production—and the settings and configuration used may not be suitable for a secure and performant production environment. Use on production servers/in the wild at your own risk!
 
+
+## 💛 Support the project
+
+If this project was useful to you in some form, I would be glad to have your support.  It will help to keep the project alive and to have more time to work on Open Source.
+
+The sinplest form of support is to give a ⭐️ to this repo.
+
+You can also contribute with [GitHub Sponsors](https://github.com/sponsors/slange-dev).
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor%20Me-red?style=for-the-badge)](https://github.com/sponsors/slange-dev)
+
+Or if you prefer a one time donation to the project, you can simple:
+
+<a href="https://www.buymeacoffee.com/slange-dev" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 ## Author
 
-Created in 2021 by [slange-dev](https://slange-dev.github.io/).
+👤 **slange-dev**
+
+* Website: [https://github.com/slange-dev](https://github.com/slange-dev)
+* Github: [@slange-dev](https://github.com/slange-dev)
+* 
+## Author
+
+Copyright © in 2021 by [slange-dev](https://slange-dev.github.io/).

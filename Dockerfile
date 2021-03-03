@@ -20,6 +20,7 @@ RUN yum makecache fast \
  && yum -y install deltarpm epel-release initscripts \
  && yum -y update \
  && yum -y install \
+      #sudo \
       which \
       hostname \
       libyaml-devel \
@@ -35,7 +36,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install $pip_packages
 
 # Disable requiretty.
-RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
+#RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible

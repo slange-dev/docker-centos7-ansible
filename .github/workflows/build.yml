@@ -46,7 +46,7 @@ jobs:
       id: scan
       uses: anchore/scan-action@v2.0.4
       with:
-        image: "slange-dev/docker-centos7-ansible"
+        image: "Dockerfile"
         fail-build: true
         
     - name: grype scan JSON results

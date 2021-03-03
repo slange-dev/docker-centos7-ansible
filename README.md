@@ -3,17 +3,14 @@
 [![Building](https://github.com/slange-dev/docker-centos7-ansible/actions/workflows/build.yml/badge.svg)](https://github.com/slange-dev/docker-centos7-ansible/actions/workflows/build.yml)
 [![Docker pulls](https://img.shields.io/docker/pulls/slangedev/docker-centos7-ansible)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
 [![Version](https://img.shields.io/docker/v/slangedev/docker-centos7-ansible/latest)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
-[![Image Size](https://img.shields.io/docker/image-size/slange-dev/docker-centos7-ansible/latest)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
+[![Image Size](https://img.shields.io/docker/image-size/slangedev/docker-centos7-ansible/latest)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
 
 CentOS 7 Docker container for Ansible playbook and role testing.
 
 ## Tags
 
-  - `latest`: Latest stable version of Ansible, on Python 2.7.x.
-  - `python2`: (Deprecated) Same as `latest`, as of early 2020.
-  - `python3`: Latest stable version of Ansible, but on Python 3.6.x.
+  - `latest`: Latest stable version of Ansible, with Python 3.x.
 
-The latest tag is a lightweight image for basic validation of Ansible playbooks. The `testing` tag also includes a comprehensive suite of Ansible and infrastructure testing tools in case you want them pre-installed.
 
 ## How to Build
 

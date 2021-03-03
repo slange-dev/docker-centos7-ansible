@@ -20,7 +20,6 @@ RUN yum makecache fast \
  && yum -y install deltarpm epel-release initscripts \
  && yum -y update \
  && yum -y install \
-      sudo \
       which \
       hostname \
       libyaml-devel \

@@ -39,19 +39,20 @@ jobs:
     needs: [lint]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Scan
-      id: scan
-      uses: anchore/scan-action@v2.0.4
-      with:
-        image: "Dockerfile"
-        fail-build: true
+      - name: Checkout
+        uses: actions/checkout@v2
         
-    - name: grype scan JSON results
-      id: results
-      run: for j in `ls ./anchore-reports/*.json`; do echo "---- ${j} ----"; cat ${j}; echo; done
+      - name: Build test image
+        run: docker build . --file Dockerfile --tag localbuild/testimage:latest
+
+      - name: Scan test image
+        uses: anchore/scan-action@v2.0.4
+        with:
+          image: "localbuild/testimage:latest"
+          fail-build: true
+          
+      - name: grype scan JSON results
+        run: for j in `ls ./anchore-reports/*.json`; do echo "---- ${j} ----"; cat ${j}; echo; done
       
   # Test the image builds and works correctly.
   test:

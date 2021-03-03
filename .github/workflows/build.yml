@@ -34,11 +34,27 @@ jobs:
       - name: Verify Ansible is accessible in the built image.
         run: docker exec --tty test-container env TERM=xterm ansible --version
 
-  # If on main branch, build and release image.
+  # Lint the Dockerfile
+  lint:
+    name: Linting
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@master
+        
+      - name: Linting
+        uses: luke142367/Docker-Lint-Action@v1.1.1
+        with:
+          target: Dockerfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+  # If on main branch, build and release the image.
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: test
+    needs: [test, lint]
     if: github.ref == 'refs/heads/main'
 
     steps:
@@ -87,7 +103,7 @@ jobs:
 
       # Temporary cache workaround
       # See https://github.com/docker/build-push-action/issues/252#issuecomment-744400434
-      - name: Move cache
+      - name: Remove the buildx cache
         run:
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache

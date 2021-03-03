@@ -1,6 +1,8 @@
 # CentOS 7 Ansible Test Image
 
-[![Building](https://github.com/slange-dev/docker-centos7-ansible/actions/workflows/build.yml/badge.svg)](https://github.com/slange-dev/docker-centos7-ansible/actions/workflows/build.yml) [![Docker pulls](https://img.shields.io/docker/pulls/slangedev/docker-centos7-ansible)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
+[![Building](https://github.com/slange-dev/docker-centos7-ansible/actions/workflows/build.yml/badge.svg)](https://github.com/slange-dev/docker-centos7-ansible/actions/workflows/build.yml)
+[![Docker pulls](https://img.shields.io/docker/pulls/slangedev/docker-centos7-ansible)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
+[![Image Size](https://img.shields.io/docker/image-size/slange-dev/docker-centos7-ansible/latest)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
 
 CentOS 7 Docker container for Ansible playbook and role testing.
 

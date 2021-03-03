@@ -53,11 +53,7 @@ If this project was useful to you in some form, I would be glad to have your sup
 
 The sinplest form of support is to give a ⭐️ to this repo.
 
-You can also contribute with [GitHub Sponsors](https://github.com/sponsors/slange-dev).
-
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor%20Me-red?style=for-the-badge)](https://github.com/sponsors/slange-dev)
-
-Or if you prefer a one time donation to the project, you can simple:
+You can also contribute with 
 
 <a href="https://www.buymeacoffee.com/slange.dev" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
@@ -70,4 +66,4 @@ Or if you prefer a one time donation to the project, you can simple:
 
 ## Copyright
 
-Copyright © in 2021 by [slange-dev](https://slange-dev.github.io/).
+Copyright © in 2021 by [slange-dev](https://github.com/slange-dev).

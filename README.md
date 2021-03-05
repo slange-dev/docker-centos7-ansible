@@ -21,8 +21,6 @@ This image is built on Docker Hub automatically any time the upstream OS contain
   2. `cd` into this directory.
   3. Run `docker build -t centos7-ansible .`
 
-> Note: Switch between `master` and `testing` depending on whether you want the extra testing tools present in the resulting image.
-
 ## How to Use
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
@@ -66,7 +64,7 @@ You can also contribute with
 
 * Website: [https://github.com/slange-dev](https://github.com/slange-dev)
 * Dev.to: [https://dev.to/slangedev](https://dev.to/slangedev)
-* StackOverFlow: [https://stackoverflow.com](https://stackoverflow.com/)
+* Stackoverflow: [https://stackoverflow.com](https://stackoverflow.com/)
 * Github: [@slange-dev](https://github.com/slange-dev)
 
 ## Copyright

@@ -56,12 +56,12 @@ jobs:
           channel: github-ci-notifications
           status: FAILED
           color: danger
-    
+
   # Test the image builds and works correctly.
   test:
     name: Testing
     runs-on: ubuntu-latest
-    needs: [lint,scan]
+    needs: [lint]
 
     steps:
       - name: Checkout
@@ -83,7 +83,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: [lint,scan,test]
+    needs: [lint,test]
     if: github.ref == 'refs/heads/main'
 
     steps:

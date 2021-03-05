@@ -4,6 +4,7 @@
 [![Docker pulls](https://img.shields.io/docker/pulls/slangedev/docker-centos7-ansible)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
 [![Version](https://img.shields.io/docker/v/slangedev/docker-centos7-ansible/latest)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
 [![Image Size](https://img.shields.io/docker/image-size/slangedev/docker-centos7-ansible/latest)](https://hub.docker.com/r/slangedev/docker-centos7-ansible/)
+[![CodeFactor](https://www.codefactor.io/repository/github/slange-dev/docker-centos7-ansible/badge?s=05770d68f332d031a56c8590cb60b5f5061cc57b)](https://www.codefactor.io/repository/github/slange-dev/docker-centos7-ansible)
 
 CentOS 7 Docker container for Ansible playbook and role testing.
 

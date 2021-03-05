@@ -15,20 +15,16 @@ on:
             # Runs at every sunday 14:10
     - cron: "10 2 * * 0"
 
-#
-env:
-  DOCKER_CLI_EXPERIMENTAL: enabled
-
 jobs:
   # Lint the Dockerfile
   lint:
     name: Linting
     runs-on: ubuntu-latest
-    
-    steps: 
+
+    steps:
       - name: Checkout
         uses: actions/checkout@master
-        
+
       - name: Linting
         id: linting
         uses: luke142367/Docker-Lint-Action@v1.1.1
@@ -50,14 +46,20 @@ jobs:
       - name: Test building image.
         id: build_image
         run: docker build -t docker-ansible .
-
+        env:
+          DOCKER_CLI_EXPERIMENTAL: enabled
+  
       - name: Run the built image.
         id: run_image
         run: docker run --name test-container -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro docker-ansible
+        env:
+          DOCKER_CLI_EXPERIMENTAL: enabled
 
       - name: Verify Ansible is accessible in the built image.
         id: test_ansible
         run: docker exec --tty test-container env TERM=xterm ansible --version
+        env:
+          DOCKER_CLI_EXPERIMENTAL: enabled
 
   # If on main branch, build and release the image.
   release:

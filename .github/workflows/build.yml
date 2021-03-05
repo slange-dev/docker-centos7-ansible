@@ -14,11 +14,11 @@ on:
     # * is a special character in YAML so you have to quote this string
             # Runs at every sunday 14:10
     - cron: "10 2 * * 0"
-    
-#    
+
+#
 env:
   DOCKER_CLI_EXPERIMENTAL: enabled
-  
+
 jobs:
   # Lint the Dockerfile
   lint:
@@ -36,26 +36,6 @@ jobs:
           target: Dockerfile
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Notify slack success
-        if: success()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1
-        with:
-          channel: github-ci-notifications
-          status: SUCCESS
-          color: good
-
-      - name: Notify slack fail
-        if: failure()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1
-        with:
-          channel: github-ci-notifications
-          status: FAILED
-          color: danger
 
   # Test the image builds and works correctly.
   test:
@@ -109,7 +89,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-            
+
       - name: Build and push image to DockerHub
         id: docker_build
         uses: docker/build-push-action@v2

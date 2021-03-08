@@ -107,7 +107,7 @@ jobs:
 
       - name: Docker Hub Description
         id: docker_hub_description
-        uses: peter-evans/dockerhub-description@v2
+        uses: peter-evans/dockerhub-description@master
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}

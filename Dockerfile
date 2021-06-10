@@ -20,23 +20,15 @@ RUN yum makecache fast \
  && yum -y install deltarpm epel-release initscripts \
  && yum -y update \
  && yum -y install \
-      #sudo \
       which \
-      hostname \
-      libyaml-devel \
-      python3 \
-      python3-pip \
-      python3-pyyaml \
+      python-pip \
  && yum clean all
 
-# Upgrade pip to latest version.
-RUN pip3 install --upgrade pip
-
 # Install Ansible via Pip.
-RUN pip3 install $pip_packages
+RUN pip install $pip_packages
 
 # Disable requiretty.
-#RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
+RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible

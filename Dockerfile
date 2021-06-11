@@ -23,11 +23,11 @@ RUN yum makecache fast \
       sudo \
       which \
       python-pip \
-      python-setuptools \      
+      #python-setuptools \      
  && yum clean all
 
 # Install Ansible via pip.
-RUN pip install --upgrade pip setuptools \
+RUN pip install --upgrade pip \
     && pip install $pip_packages
 
 # Disable requiretty.

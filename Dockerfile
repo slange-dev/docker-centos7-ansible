@@ -25,8 +25,9 @@ RUN yum makecache fast \
       python-pip \
  && yum clean all
 
-# Install Ansible via Pip.
-RUN pip install $pip_packages
+# Install Ansible via pip.
+RUN pip install --upgrade pip setuptools \
+    && pip install $pip_packages
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers

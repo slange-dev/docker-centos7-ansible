@@ -20,7 +20,7 @@ RUN yum makecache fast \
  && yum -y install deltarpm epel-release initscripts \
  && yum -y update \
  && yum -y install \
-      # sudo \
+      sudo \
       which \
       python-pip \
  && yum clean all

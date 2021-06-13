@@ -23,7 +23,7 @@ RUN yum makecache fast \
       sudo \
       which \
       python3-pip \
-      #python3-setuptools \      
+      python3-setuptools \      
  && yum clean all
 
 # Install Ansible via pip.
